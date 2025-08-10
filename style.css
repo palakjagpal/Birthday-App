@@ -1,0 +1,283 @@
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+    Aesthetic and Responsive CSS for the Birthday App.
+    - Uses a light, professional color scheme.
+    - Implements a responsive design for all screen sizes.
+    - Adds a cool hover and click animation to the button.
+    - Uses the Google Fonts specified in index.html.
+*/
+
+/* General Body Styling */
+body {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Set up a clean, light background */
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3); /* A very light cream and warm beige gradient */
+    color: #334e68; /* A dark, professional blue-gray for text (kept as it was not specified to change, but can be adjusted if needed) */
+    font-family: 'Quicksand', sans-serif; /* Use the specified Google Font */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Use flexbox to center the content on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    cursor: pointer;
+}
+
+
+/* Main Container Styling */
+.container {
+    /* This class is added to the <div> in the HTML to style the card-like container */
+    background-color: #ffffff; /* Pure white */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle, professional shadow */
+    padding: 40px;
+    width: 90%;
+    max-width: 500px; /* Limit the width on large screens */
+    text-align: center;
+
+    /* Use flexbox for the internal layout */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+img{
+    border-radius: 100%;
+    width: 250px;
+    margin: 0 auto;
+}
+
+/* Heading Styling */
+h1 {
+    font-family: 'Comfortaa', sans-serif; /* Use the specified Google Font */
+    color: #444; /* Medium gray */
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Label Styling */
+label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: #666; /* Soft gray */
+}
+
+/* Input Field Styling */
+#birthday-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc; /* Light gray border color */
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #334e68; /* Kept original for input text color, can be changed to #444 or #666 if desired */
+    background-color: #f8fafc; /* Very light background for the input (kept as it was not specified to change) */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+/* Input Focus State */
+#birthday-input:focus {
+    outline: none;
+    border-color: #ffb347; /* Warm orange for focus */
+    box-shadow: 0 0 0 4px rgba(255, 179, 71, 0.2); /* Subtle glow effect with warm orange */
+}
+
+/* Button Styling and Animation */
+#submit-button {
+    width: 100%;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ffb347, #ffcc33); /* Warm orange and bright yellow gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover State (for animation) */
+#submit-button:hover {
+    background: linear-gradient(135deg, #ffcc33, #ffb347); /* Slightly changed gradient on hover */
+    transform: translateY(-3px); /* Lift the button up */
+    box-shadow: 0 8px 20px rgba(255, 179, 71, 0.5); /* Increase shadow for "lift" effect */
+}
+
+/* Button Active State (for animation) */
+#submit-button:active {
+    transform: translateY(0); /* Press the button down */
+    box-shadow: 0 3px 10px rgba(255, 179, 71, 0.3); /* Reduce shadow for "pressed" effect */
+}
+
+/* delete button */
+#delete-button {
+    width: 100%;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #eb6a6a, #972d2d); /* Warm orange and bright yellow gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 179, 71, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover State (for animation) */
+#delete-button:hover {
+    background: linear-gradient(135deg, #972d2d, #eb6a6a); /* Slightly changed gradient on hover */
+    transform: translateY(-3px); /* Lift the button up */
+    box-shadow: 0 8px 20px rgba(255, 179, 71, 0.5); /* Increase shadow for "lift" effect */
+}
+
+/* Button Active State (for animation) */
+#delete-button:active {
+    transform: translateY(0); /* Press the button down */
+    box-shadow: 0 3px 10px rgba(255, 179, 71, 0.3); /* Reduce shadow for "pressed" effect */
+}
+
+
+/* Styling for the Birthday List */
+#ul-el {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left; /* Align list items to the left */
+}
+
+#ul-el li {
+    background-color: #f8f8f8; /* A very light gray background for each list item */
+    border: 1px solid #eee; /* Light border */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between list items */
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: #444; /* Dark gray text */
+    word-wrap: break-word; /* Ensure long entries wrap */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+#ul-el li:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+#ul-el li p {
+    text-decoration: none; /* Remove underline from links */
+    color: #334e68; /* Use the primary text color or a slightly darker shade */
+    font-weight: 500;
+    display: block; /* Make the whole list item clickable */
+    padding: 0;
+}
+
+#ul-el li p:hover {
+    color: #774f16; /* Warm orange on hover for links */
+}
+
+
+/*
+    Responsiveness: Media Queries
+    Adjust styles for different screen sizes (tablets and mobile).
+*/
+
+/* Tablet View */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 30px;
+        width: 95%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        /* Re-center the content, as we might have removed padding */
+        min-height: 100vh;
+        align-items: flex; /* Align content to the top on small screens to prevent scroll issues */
+    }
+    .container {
+        padding: 25px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    label, #birthday-input, #submit-button, #delete-button {
+        font-size: 0.9rem;
+    }
+
+    /* Tablet View */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 30px;
+        width: 95%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #ul-el li {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        /* Re-center the content, as we might have removed padding */
+        min-height: 100vh;
+        align-items: flex-start; /* Align content to the top on small screens to prevent scroll issues */
+    }
+    .container {
+        padding: 25px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2rem; /* Adjusted for smaller screens */
+    }
+    label, #birthday-input, #submit-button, #delete-button {
+        font-size: 0.9rem;
+    }
+    #ul-el li {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+}
